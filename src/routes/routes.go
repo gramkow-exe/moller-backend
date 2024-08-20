@@ -1,16 +1,12 @@
 package routes
 
 import (
-	"fmt"
 	"log"
+	"moller-backend/src/controllers"
 	"net/http"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("Home Called!")
-}
-
 func HandleRequest() {
-	http.HandleFunc("/", Home)
+	http.HandleFunc("/", controllers.Home)
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
