@@ -3,9 +3,18 @@ package main
 import (
 	"fmt"
 
-	mollerbackend "moller-backend/src"
+	"moller-backend/src/entities"
+	"moller-backend/src/routes"
 )
 
 func main() {
-	fmt.Printf("Duplo de 3 é %d\n", mollerbackend.Duplo(3))
+	// Entities package
+	user := entities.User{
+		Id:   1,
+		Nome: "ugo",
+	}
+	fmt.Println(user)
+
+	// Routes package
+	routes.Test()
 }
